@@ -1,0 +1,481 @@
+/* General Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  /* Crisis Helplines Section */
+  ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+  }
+  
+  ul li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  
+  ul li a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  ul li a:hover {
+    color: #0056b3;
+  }
+  
+  /* Articles Section */
+.articles-section {
+    margin-bottom: 4rem;
+  }
+  
+  .articles-section h2 {
+    font-size: 2.5rem; /* Increase heading size */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .articles-section h2 .icon {
+    font-size: 2.5rem; /* Increase icon size */
+    margin-right: 0.75rem;
+  }
+  
+  .articles-grid {
+    display: grid;
+    grid-gap: 2rem; /* Add more spacing between the articles */
+    grid-template-columns: repeat(1, 1fr); /* 1 column by default */
+    margin-top: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .articles-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .articles-grid {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns on large screens */
+    }
+  }
+  
+  .article-card {
+    background-color: #ffffff;
+    padding: 2rem; /* Increase padding */
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #f0f0f0;
+  }
+  
+  .article-card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+  }
+  
+  .article-card h3 {
+    font-size: 1.75rem; /* Increase font size */
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .article-link {
+    font-size: 1.2rem; /* Slightly larger link text */
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .article-link:hover {
+    color: #0056b3; /* Darker blue on hover */
+  }
+  
+  
+  /* Videos Section */
+  .video-slide {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .video-slide:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .video-slide iframe {
+    border-radius: 10px;
+  }
+  
+  .video-slide p {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+  }
+  
+  /* Swiper Pagination and Navigation */
+  .swiper-pagination-bullet {
+    background-color: #007bff;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background-color: #0056b3;
+  }
+  
+  .swiper-button-next, .swiper-button-prev {
+    color: #007bff;
+  }
+  
+  .swiper-button-next:hover, .swiper-button-prev:hover {
+    color: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 767px) {
+    .container {
+      padding: 1rem;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    .articles-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .video-slide iframe {
+      height: 200px;
+    }
+  }
+  /* Mental Well-Being Section */
+.mental-wellbeing-section {
+    background-color: #e0f7f9; /* Light background color */
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #111;
+  }
+  
+  .section-subtitle {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 3rem;
+  }
+  
+  .wellbeing-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 1 column by default */
+    gap: 1.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .wellbeing-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .wellbeing-grid {
+      grid-template-columns: repeat(4, 1fr); /* 4 columns for large screens */
+    }
+  }
+  
+  .wellbeing-card {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #111;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .wellbeing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .view-more-link {
+    display: inline-block;
+    margin-top: 2rem;
+    color: #007b7f;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .view-more-link:hover {
+    text-decoration: underline;
+  }
+  
+
+
+  /* Better Mental Health Section */
+.better-mental-health-section {
+  background-color: #f8f8f4; /* Light background color */
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 3rem; /* Large heading size */
+  font-weight: bold;
+  font-family: 'Georgia', serif; /* Classic serif font */
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.content-block {
+  flex: 1;
+  max-width: 30%; /* Equal width for the three blocks */
+  background-color: transparent;
+  padding: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .content-block {
+    max-width: 45%; /* Two columns on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .content-block {
+    max-width: 100%; /* One column on small screens */
+  }
+}
+
+.content-title {
+  font-size: 1.8rem;
+  font-family: 'Georgia', serif; /* Serif font for titles */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.content-list {
+  list-style-type: disc; /* Use bullets */
+  margin-left: 1.5rem;
+  text-align: left;
+}
+
+.content-list li {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  font-family: 'Arial', sans-serif; /* Sans-serif for body text */
+}
+
+/* Better Mental Health Section */
+.better-mental-health-section {
+  background-color: #f8f8f4; /* Light background color */
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 3rem; /* Large heading size */
+  font-weight: bold;
+  font-family: 'Georgia', serif; /* Classic serif font */
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.content-block {
+  flex: 1;
+  max-width: 30%; /* Equal width for the three blocks */
+  background-color: transparent;
+  padding: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .content-block {
+    max-width: 45%; /* Two columns on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .content-block {
+    max-width: 100%; /* One column on small screens */
+  }
+}
+
+.content-title {
+  font-size: 1.8rem;
+  font-family: 'Georgia', serif; /* Serif font for titles */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.content-list {
+  list-style-type: disc; /* Use bullets */
+  margin-left: 1.5rem;
+  text-align: left;
+}
+
+.content-list li {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  font-family: 'Arial', sans-serif; /* Sans-serif for body text */
+}
+
+/* Better Mental Health Section */
+.better-mental-health-section {
+    background-color: #f8f8f4; /* Light background color */
+    padding: 6rem 2rem;
+    text-align: center;
+    padding-bottom: 10rem;
+  }
+  
+  .section-heading {
+    font-size: 3.5rem;
+    font-weight: bold;
+    font-family: 'Georgia', serif; /* Serif font for an elegant look */
+    margin-bottom: 4rem;
+    color: #2c2c2c;
+    letter-spacing: 0.05em; /* Slight spacing between letters */
+    line-height: 1.2; /* Adjusted line height for better vertical spacing */
+  }
+  
+  .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .content-block {
+    flex: 1;
+    max-width: 30%;
+    padding: 1.5rem;
+    background-color: transparent;
+    margin-bottom: 3rem;
+    transition: all 0.3s ease; /* Add transition for smooth effects */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle default shadow */
+  }
+  
+  @media (max-width: 1024px) {
+    .content-block {
+      max-width: 45%; /* Two columns on medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .content-block {
+      max-width: 100%; /* One column on small screens */
+    }
+  }
+  
+  .content-title {
+    font-size: 2rem;
+    font-family: 'Georgia', serif; /* Serif font for titles */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    text-transform: uppercase; /* Make the title uppercase */
+    letter-spacing: 0.05em;
+  }
+  
+  .content-list {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    text-align: left;
+    padding-left: 1rem;
+  }
+  
+  .content-list li {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 1.2rem;
+  }
+  
+  .content-list li::marker {
+    font-size: 1.5rem;
+    color: #333; /* Darker bullet points */
+  }
+  
+  /* Hover Effects */
+  
+  /* When hovering on a content block */
+  .content-block:hover {
+    background-color: #eef6f7; /* Background color change on hover */
+    transform: translateY(-10px); /* Slight upward movement */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+    z-index: 1; /* Make it stand out */
+  }
+  
+  /* Apply shadow to other blocks when one is hovered */
+  .content-block:hover ~ .content-block,
+  .content-block:hover + .content-block {
+    opacity: 0.5; /* Fade out the other blocks */
+  }
+  
+  /* Optional: Hover effect for the entire section */
+  .better-mental-health-section:hover .content-block {
+    transition: opacity 0.3s ease;
+  }
+  

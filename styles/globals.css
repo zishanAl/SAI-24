@@ -1,0 +1,773 @@
+/* ---------- GOOGLE FONTS ---------- */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;1,600&display=swap");
+
+/* ---------- TAILWIND DIRECTIVES ---------- */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- BASE ---------- */
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  font-family: "Rubik", sans-serif;
+
+  overflow-x: hidden;
+}
+
+body {
+  line-height: 1.6;
+  font-weight: 400;
+  color: #555;
+
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- REUSABLE CSS CLASSES ---------- */
+.container {
+  @apply max-w-[120rem] py-[3rem] mx-auto px-[2rem] xl:px-0;
+}
+
+.section {
+  @apply pt-[12rem] py-[10rem];
+}
+
+.d-grid {
+  display: grid;
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
+}
+
+.d-grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.grid--center-v {
+  align-items: center;
+}
+
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
+
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 1.6rem 3.2rem;
+
+  color: #fff;
+  border-radius: 1rem;
+
+  font-size: 2rem;
+  font-weight: 600;
+  transition: all 0.3s;
+
+  border: none;
+  cursor: pointer;
+
+  font-family: inherit;
+}
+
+/* .btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  padding: 1.2rem;
+
+  align-self: flex-end;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
+} */
+
+.btn--primary {
+  background-color: #5dc4bb;
+}
+
+.btn--primary:hover {
+  background-color: #387670;
+}
+
+.btn--secondary {
+  background-color: white;
+  color: #555;
+}
+
+.btn--secondary:hover {
+  background-color: #fdf2e9;
+  /* Trick to add border inside */
+  box-shadow: inset 0 0 0 3px #fff;
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-weight: 700;
+  letter-spacing: -0.75px;
+  color: #333;
+}
+
+/* .heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.05;
+
+  margin-bottom: 3.2rem;
+} */
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+
+.heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+
+.subheading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #387670;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  margin-bottom: 1.6rem;
+}
+
+strong {
+  font-weight: 600;
+}
+
+/* ---------- HEADER ---------- */
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 8rem;
+  z-index: 100;
+}
+
+@media screen and (min-width: 1200px) {
+  .header {
+    padding-inline: 2.5rem;
+  }
+}
+
+.nav {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(206, 237, 235, 0.9);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  /* box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03); */
+  z-index: 1000;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+
+.nav-list {
+  position: relative;
+
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2.5rem;
+}
+
+.main-nav-link.nav-cta {
+  padding: 1.2rem 2.4rem;
+  border-radius: 1rem;
+
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* ---------- HERO ---------- */
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.people-imgs {
+  display: flex;
+}
+
+.people-imgs img {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  margin-right: -1.6rem;
+
+  border: 3px solid #9edcd6;
+}
+
+/* ---------- CLIENTS ---------- */
+.logo {
+  width: 100%;
+
+  filter: brightness(0);
+  opacity: 0.5;
+  transition: 0.3s;
+  -webkit-filter: brightness(0);
+}
+
+.logo:hover {
+  opacity: 1;
+  filter: brightness(100%);
+}
+
+/* ---------- HOW IT WORKS ---------- */
+.step-number {
+  font-size: 8.6rem;
+  font-weight: 600;
+  color: #ddd;
+  margin-bottom: 1.2rem;
+}
+
+.step-description {
+  font-size: 2rem;
+  line-height: 1.8;
+}
+
+/* ---------- PRICING ---------- */
+.pricing-plan {
+  border-radius: 1.1rem;
+  width: 75%;
+
+  overflow: hidden;
+}
+
+.pricing-plan--starter {
+  justify-self: end;
+  border: 2px solid #5dc4bb;
+  padding: 4.6rem;
+}
+
+/* .pricing-plan--complete {
+  background-color: #fdf2e9;
+  padding: 4.8rem;
+
+  position: relative;
+} */
+
+/* .pricing-plan--complete::after {
+  content: "Best Value";
+
+  position: absolute;
+  top: 6%;
+  right: -18%;
+
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #333;
+  background-color: #ffd43b;
+
+  padding: 0.8rem 8rem;
+  transform: rotate(45deg);
+} */
+
+.plan-header {
+  text-align: center;
+}
+
+.plan-name {
+  color: #5dc4bb;
+  font-weight: 600;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  margin-bottom: 3.2rem;
+}
+.plan-price {
+  font-size: 6.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.6rem;
+}
+
+.plan-price span {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-right: 0.8rem;
+}
+
+.plan-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #6f6f6f;
+}
+
+.plan-sign-up {
+  margin-top: 2.4rem;
+  text-align: center;
+}
+
+.feature-icon {
+  color: #387670;
+  height: 6rem;
+  width: 6rem;
+  margin-bottom: 3.2rem;
+  background-color: #eff9f8;
+  padding: 1.6rem;
+  border-radius: 50%;
+}
+
+.feature-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+
+.feature-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+/* ---------- TESTIMONIALS ---------- */
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 4.8rem;
+  column-gap: 8rem;
+}
+
+.testimonial-img {
+  width: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
+
+.testimonial-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+}
+
+.testimonial-name {
+  font-size: 1.6rem;
+  color: #6f6f6f;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+
+  padding: 1.6rem;
+}
+
+.gallery-item {
+  overflow: hidden;
+}
+
+.gallery-item img {
+  display: block;
+  transition: all 0.4s;
+  width: 100%;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+
+/* ---------- CONTACT ---------- */
+.contact-img--container {
+  background-image: url("../public/assets/images/home/contact-img.webp");
+  background-size: cover;
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+}
+
+.cta-form label {
+  display: block;
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+  /* color: #eee; */
+}
+
+.cta-form input,
+.cta-form textarea {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  outline: none !important;
+  border: none !important;
+  background-color: #eff9f8;
+  border-radius: 9px;
+  font-family: inherit;
+  color: inherit;
+
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.cta-form input::placeholder,
+.cta-form textarea::placeholder {
+  color: #aaa;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+  /* margin-top: 10rem; */
+  padding: 12.8rem 2.5rem;
+  border-top: 1px solid #ddd;
+}
+
+.grid--footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr;
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.footer-link {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
+  transition: all 0.3s;
+}
+
+.footer-link:hover {
+  color: #555;
+}
+
+.footer-nav {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ---------- BREAKPOINTS ---------- */
+/* 1340 */
+@media screen and (max-width: 84em) {
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 1200px */
+@media screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
+
+  .d-grid {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
+
+  .header {
+    padding: 0 3.2rem;
+  }
+
+  .testimonials-container {
+    padding: 9.6rem 3rem;
+  }
+
+  .cta-form:nth-child(5) {
+    grid-column: span 2 / span 2;
+  }
+}
+
+/* @media screen and (min-width: 60em) {
+  .cta-form--textarea {
+    grid-column: span 2 / span 2;
+  }
+} */
+
+/* 940px */
+@media screen and (max-width: 59em) {
+  html {
+    font-size: 50%;
+  }
+
+  .hero-image {
+    width: 60%;
+  }
+
+  .logo {
+    height: 2.4rem;
+  }
+
+  .step-number {
+    font-size: 7.4rem;
+  }
+
+  .section-testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .cta-form {
+    grid-template-columns: 1fr;
+    row-gap: 3.2rem;
+  }
+
+  .main-nav {
+    background-color: rgba(245, 245, 245, 0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+}
+
+/* 700px */
+@media screen and (max-width: 44em) {
+  .grid--3-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid--4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .heading-secondary {
+    margin-bottom: 4.8rem;
+  }
+
+  .pricing-plan {
+    width: 100%;
+  }
+
+  .logo-col,
+  .address-col {
+    grid-column: span 3;
+  }
+}
+
+/* 544px */
+@media screen and (max-width: 34em) {
+  .d-grid {
+    row-gap: 4.8rem;
+  }
+
+  .grid--2-cols,
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .section-hero {
+    padding: 2.4rem 0 6.4rem 0;
+  }
+
+  .hero {
+    padding: 0 3.2rem;
+  }
+
+  .hero-image {
+    width: 80%;
+  }
+
+  .logo {
+    height: 1.2rem;
+  }
+
+  .step-image-box:nth-child(2) {
+    grid-row: 1;
+  }
+
+  .step-image-box:nth-child(6) {
+    grid-row: 5;
+  }
+
+  .step-image-box {
+    transform: translateY(2.4rem);
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+  }
+
+  .cta {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-text-box {
+    padding: 3.2rem;
+  }
+
+  .cta-img-box {
+    height: 32rem;
+    grid-row: 1;
+  }
+}
+
+
+
+/* new */
+
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-top: 7rem; /* Add margin to prevent overlapping with the navbar */
+}
+
+/* Map Section */
+.map-section {
+  margin-bottom: 3rem;
+  margin-top: 2rem; /* Add spacing above the map */
+}
+
+/* Hospital List Section */
+.hospital-list {
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.hospital-list-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+  background: linear-gradient(to right, #4caf50, #81c784); /* Gradient effect */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.hospital-list-items {
+  list-style: none;
+  padding: 0;
+}
+
+.hospital-list-item {
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #333;
+}
+
+.hospital-list-item strong {
+  font-size: 1.8rem;
+  color: #00796b; /* Darker teal for emphasis */
+}
+
+.hospital-list-item:hover {
+  background-color: #e0f7fa; /* Light highlight on hover */
+  transform: translateY(-3px); /* Slight hover lift effect */
+}
+
+.no-hospitals {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #777;
+}
